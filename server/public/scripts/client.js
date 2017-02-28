@@ -15,11 +15,13 @@ $(document).ready(function(){
       }
     });
   }
-
+  
   $('#newBookButton').on('click', function(){
     var newBookObject = {};
     newBookObject.title = $('#newBookTitle').val();
     newBookObject.author = $('#newBookAuthor').val();
+    newBookObject.edition = $('#newBookEdition').val();
+    newBookObject.publisher = $('#newBookPublisher').val();
     $.ajax({
       type: 'POST',
       url: '/books/new',
